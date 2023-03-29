@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 const ButtonWrapper = styled.button`
-
+    color: ${props => props.isActive ? "white" : "white"};
 `
 
-function Button({isActive}) {
+function Button({isActive, text}) {
     return (
-        <ButtonWrapper />
+        <ButtonWrapper isActive={isActive}>{text}</ButtonWrapper>
     )
 }
 

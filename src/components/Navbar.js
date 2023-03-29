@@ -1,7 +1,10 @@
+import Button from "./Button";
+
 function Navbar() {
     return (
         <nav>
-            nav here
+            <Button isActive={window.location.pathname === "/"} text="Assistive Tech"/>
+            <Button isActive={window.location.pathname === "/asl"} text="Learn ASL"/>
         </nav>
     )
 }
