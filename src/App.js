@@ -4,7 +4,7 @@ import LearnASL from './LearnASL';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route exact path="/" element={<AssistiveTech />} />
         <Route exact path="/asl" element={<LearnASL />} />
