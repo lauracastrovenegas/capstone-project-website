@@ -1,6 +1,8 @@
 function LearnASL() {
     return (
-        <div></div>
+        <div>
+            Learn ASL
+        </div>
     )    
 }
 
