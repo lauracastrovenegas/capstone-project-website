@@ -3,6 +3,7 @@ import Button from "./Button";
 
 const NavWrapper = styled.nav`
     display: flex;
+    padding: 1rem 10rem;
 `
 
 const Navbar = ({setSection, currentSection}) => {    
