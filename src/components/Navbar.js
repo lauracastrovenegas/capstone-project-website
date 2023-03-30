@@ -1,11 +1,16 @@
+import styled from "styled-components";
 import Button from "./Button";
 
-function Navbar() {
+const NavWrapper = styled.nav`
+    display: flex;
+`
+
+const Navbar = ({setSection, currentSection}) => {    
     return (
-        <nav>
-            <Button isActive={window.location.pathname === "/"} text="Assistive Tech"/>
-            <Button isActive={window.location.pathname === "/asl"} text="Learn ASL"/>
-        </nav>
+        <NavWrapper>
+                <Button text="Assistive Tech" link="/" currentSection={currentSection} setSection={setSection}/>
+                <Button text="Learn ASL" link="/asl" currentSection={currentSection} setSection={setSection}/>
+        </NavWrapper>
     )
 }
 

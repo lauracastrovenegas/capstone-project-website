@@ -2,12 +2,15 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AssistiveTech from './AssistiveTech';
 import LearnASL from './LearnASL';
 import Navbar from './components/Navbar';
+import React, {useState} from 'react';
 
-function App() {
+const App = () => {
+  const [currentSection, setSection] = useState("/");
+
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <header>
-        <Navbar/>
+        <Navbar setSection={setSection} currentSection={currentSection}/>
       </header>
       <main>
         <Routes>

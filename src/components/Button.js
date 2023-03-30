@@ -1,12 +1,26 @@
 import styled from "styled-components";
+import theme from "../theme";
+import { Link } from 'react-router-dom';
 
 const ButtonWrapper = styled.button`
-    color: ${props => props.isActive ? "white" : "white"};
+    color: ${props => props.isActive ? theme.colors.white : theme.colors.purple};
+    background-color: ${props => props.isActive ? theme.colors.purple : theme.colors.white};
+    border-color: ${theme.colors.purple};
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 30px;
+    font-size: 2rem;
+    font-weight: 800;
+    padding: 2rem 2rem;
+    width: 25rem;
+    cursor: pointer;
 `
 
-function Button({isActive, text}) {
+const Button = ({text, link, currentSection, setSection}) => {
     return (
-        <ButtonWrapper isActive={isActive}>{text}</ButtonWrapper>
+        <Link to={link} style={{margin: "1rem auto"}} onClick={() => setSection(link)}>
+            <ButtonWrapper isActive={currentSection === link}>{text}</ButtonWrapper>
+        </Link>
     )
 }
 
