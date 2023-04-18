@@ -3,7 +3,7 @@ import { AACSectionData } from "../data"
 import SubsectionCarousel from "./SubsectionCarousel"
 
 const Wrapper = styled.div`
-    margin: 2rem 2rem;
+    margin: 3rem 2rem;
 `
 
 const SectionTitle = styled.h2`
