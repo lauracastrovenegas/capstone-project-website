@@ -21,8 +21,8 @@ const App = () => {
       </header>
       <BodyWrapper>
         <Routes>
-        <Route exact path="/" element={<AssistiveTech />} />
-        <Route exact path="/asl" element={<LearnASL />} />
+        <Route exact path="/" element={<AssistiveTech setSection={setSection}/>} />
+        <Route exact path="/asl" element={<LearnASL setSection={setSection}/>} />
       </Routes>
       </BodyWrapper>
     </BrowserRouter>
