@@ -4,9 +4,11 @@ import GreyCallout from "./components/GreyCallout";
 import SquareCard from "./components/SquareCard";
 import ALDSection from "./components/ALDSection";
 import AACSection from "./components/AACSection";
+import ADSection from "./components/ADSection";
+import NextButton from "./components/NextButton";
 
 const PageWrapper = styled.div`
-
+    margin-bottom: 4rem;
 `
 
 const MainTitle = styled.h1`
@@ -26,7 +28,7 @@ const Row1 = styled.div`
     display: flex;
 `
 
-function AssistiveTech() {
+const AssistiveTech = ({setSection}) => {
     return (
         <PageWrapper>
             <MainTitle>What types of <PurpleText>assistive devices</PurpleText> are available for <PurpleText>Deaf/Hard-of-Hearing</PurpleText> People?</MainTitle>
@@ -38,6 +40,8 @@ function AssistiveTech() {
             </Row1>
             <ALDSection/>
             <AACSection/>
+            <ADSection/>
+            <NextButton text="Learn ASL" link="/asl" setSection={setSection}/>
         </PageWrapper>
     )    
 }
