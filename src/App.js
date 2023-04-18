@@ -7,7 +7,7 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 
 const BodyWrapper = styled.main`
-  padding: 3rem 10rem;
+  padding: 0rem 10rem;
 `
 
 const App = () => {
