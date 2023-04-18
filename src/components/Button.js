@@ -11,9 +11,14 @@ const ButtonWrapper = styled.button`
     border-radius: 30px;
     font-size: 2rem;
     font-weight: 800;
-    padding: 2rem 2rem;
-    width: 25rem;
+    padding: 1.5rem 2rem;
+    width: 23rem;
     cursor: pointer;
+
+    :hover {
+        background-color: ${theme.colors.purple};
+        color: white;
+    }
 `
 
 const Button = ({text, link, currentSection, setSection}) => {
