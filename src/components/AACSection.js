@@ -21,7 +21,7 @@ const Row = styled.div`
     display: flex;
 `
 
-const AACSection = () => {
+const AACSection = ({setItemSelected}) => {
     return (
         <Wrapper>
             <SectionTitle>Augmentative and alternative communication (AAC) devices</SectionTitle>
