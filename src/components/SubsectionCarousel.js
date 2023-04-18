@@ -2,6 +2,7 @@ import styled from "styled-components";
 import theme from "../theme";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import PhotoSquare from "./PhotoSquare";
 
 const Wrapper = styled.div`
     margin: 2rem;
@@ -24,10 +25,9 @@ const SubsectionCarousel = ({title, items}) => {
             <Title>{title}</Title>
             <CarouselWrapper>
             <Carousel responsive={responsive} infinite showDots keyBoardControl>
-                <div>Item 1</div>
-                <div>Item 2</div>
-                <div>Item 3</div>
-                <div>Item 4</div>
+                {items.map((item) => (
+                    <PhotoSquare imgLink={item.imgLink} imgAlt={item.imgLink}/>
+                ))}
             </Carousel>;
             </CarouselWrapper>
         </Wrapper>
