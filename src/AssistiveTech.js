@@ -11,7 +11,8 @@ import Popup from "./components/Popup";
 import { AssistiveTechData } from "./data";
 
 const PageWrapper = styled.div`
-    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+    padding-top: 1rem;
 `
 
 const MainTitle = styled.h1`
@@ -33,13 +34,13 @@ const Row1 = styled.div`
 
 const SquareWrapper = styled.div`
     display: flex;
-    background-color: white;
+    background-color: ${props => props.isDark ? "black" : "white"};
     border-radius: 15px;
     padding: 3rem 1.5rem;
     flex: 1;
     margin: 2rem 1rem;
     box-shadow: 0px 67.11px 109.06px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(216, 216, 216, 0.4);
+    border: ${props => props.isDark ? '3px solid rgba(216, 216, 216, 0.4)' : '1px solid rgba(216, 216, 216, 0.4)'};
 
     transition: transform 1s;
     
@@ -51,25 +52,25 @@ const SquareWrapper = styled.div`
     }
 `
 
-const AssistiveTech = ({setSection}) => {
+const AssistiveTech = ({setSection, options}) => {
     const [itemSelected, setItemSelected] = useState(null);
 
     return (
         <PageWrapper>
-            <Popup item={itemSelected} setItemSelected={setItemSelected}/>
+            <Popup item={itemSelected} setItemSelected={setItemSelected} isDark={options.darkMode}/>
             <MainTitle>What types of <PurpleText>assistive devices</PurpleText> are available for <PurpleText>Deaf/Hard-of-Hearing</PurpleText> People?</MainTitle>
-            <GreyCallout><BoldText>What is an assistive device?</BoldText> The terms assistive device or assistive technology can refer to any device that helps a person with hearing loss or a voice, speech, or language disorder to communicate. These terms often refer to devices that help a person to hear and understand what is being said more clearly or to express thoughts more easily.</GreyCallout>
+            <GreyCallout isDark={options.darkMode}><BoldText>What is an assistive device?</BoldText> The terms assistive device or assistive technology can refer to any device that helps a person with hearing loss or a voice, speech, or language disorder to communicate. These terms often refer to devices that help a person to hear and understand what is being said more clearly or to express thoughts more easily.</GreyCallout>
             <Row1>
                 {AssistiveTechData.map((item) => (
-                    <SquareWrapper onClick={() =>  setItemSelected(item)}>
+                    <SquareWrapper onClick={() =>  setItemSelected(item)} isDark={options.darkMode}>
                         <SquareCard>{item.title}</SquareCard>
                     </SquareWrapper>
                 ))}
             </Row1>
-            <ALDSection setItemSelected={setItemSelected}/>
-            <AACSection setItemSelected={setItemSelected}/>
+            <ALDSection setItemSelected={setItemSelected} isDark={options.darkMode}/>
+            <AACSection setItemSelected={setItemSelected} isDark={options.darkMode}/>
             <ADSection setItemSelected={setItemSelected}/>
-            <NextButton text="Learn ASL" link="/asl" setSection={setSection}/>
+            <NextButton text="Learn ASL" link="/asl" setSection={setSection} isDark={options.darkMode}/>
         </PageWrapper>
     )    
 }

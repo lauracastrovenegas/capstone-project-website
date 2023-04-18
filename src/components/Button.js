@@ -3,8 +3,14 @@ import theme from "../theme";
 import { Link } from 'react-router-dom';
 
 const ButtonWrapper = styled.button`
-    color: ${props => props.isActive ? theme.colors.white : theme.colors.purple};
-    background-color: ${props => props.isActive ? theme.colors.purple : theme.colors.white};
+    color: ${props => props.isDark ? 
+        props => props.isActive ? theme.colors.white : theme.colors.purple
+        : props => props.isActive ? theme.colors.white : theme.colors.purple};
+    
+    background-color: ${props => props.isDark ? 
+        props => props.isActive ? theme.colors.purple : theme.colors.black
+        : props => props.isActive ? theme.colors.purple : theme.colors.white};
+    
     border-color: ${theme.colors.purple};
     border-style: solid;
     border-width: 5px;
@@ -21,10 +27,11 @@ const ButtonWrapper = styled.button`
     }
 `
 
-const Button = ({text, link, currentSection, setSection}) => {
+const Button = ({text, link, currentSection, setSection, isDark}) => {
+
     return (
         <Link to={link} style={{margin: "1rem auto"}} onClick={() => setSection(link)}>
-            <ButtonWrapper isActive={currentSection === link}>{text}</ButtonWrapper>
+            <ButtonWrapper isActive={currentSection === link} isDark={isDark}>{text}</ButtonWrapper>
         </Link>
     )
 }

@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 `
 
 const Title = styled.h4`
-    color: ${theme.colors.purple};
+    color: ${props => props.isDark ? theme.colors.lightPurple : theme.colors.purple};
     text-align: center;
     margin: 1rem;
     font-size: 1.5rem;
@@ -64,10 +64,10 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
     return <LeftArrowWrapper onClick={() => onClick()}><FontAwesomeIcon icon={faChevronLeft}/></LeftArrowWrapper>;
 };
 
-const SubsectionCarousel = ({title, items}) => {
+const SubsectionCarousel = ({title, items, isDark}) => {
     return (
         <Wrapper>
-            <Title>{title}</Title>
+            <Title isDark={isDark}>{title}</Title>
             <CarouselWrapper>
             <Carousel responsive={responsive} infinite showDots keyBoardControl customRightArrow={<CustomRightArrow />} customLeftArrow={<CustomLeftArrow/>}>
                 {items.map((item) => (

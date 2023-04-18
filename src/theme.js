@@ -3,7 +3,9 @@ const theme = {
       white: '#FFFFFF',
       black: '#000000',
       purple: "#7F56D9",
-      gray: "#D9D9D9"
+      lightPurple: "#C1A6FF",
+      gray: "#D9D9D9",
+      darkGray: '#6F6F6F'
     },
     sizes: {
       mobile: "767px",

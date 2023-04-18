@@ -22,14 +22,14 @@ const CardContainer = styled.div`
     margin: 2rem;
 `
 
-const ALDSection = ({ setItemSelected }) => {
+const ALDSection = ({ setItemSelected, isDark }) => {
     return (
         <Wrapper>
             <SectionTitle>Assistive listening devices (ALDs)</SectionTitle>
             <CardsContainer>
                 {ALDsSectionData.map((section) => (
                     <CardContainer onClick={() => setItemSelected(section)}>
-                        <PhotoCard imgLink={section.imgLink} imgAlt={section.imgAlt} text={section.title} />
+                        <PhotoCard isDark={isDark} imgLink={section.imgLink} imgAlt={section.imgAlt} text={section.title} />
                     </CardContainer>
                 ))}
             </CardsContainer>

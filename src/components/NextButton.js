@@ -10,7 +10,7 @@ const Wrapper = styled.div`
 
 const ButtonWrapper = styled.button`
     color: ${theme.colors.purple};
-    background-color: ${theme.colors.white};
+    background-color: ${props => props.isDark ? theme.colors.black : theme.colors.white};
     border-color: ${theme.colors.purple};
     border-style: solid;
     border-width: 5px;
@@ -38,11 +38,11 @@ const Text = styled.div`
     }
 `
 
-const NextButton = ({text, link, setSection}) => {
+const NextButton = ({text, link, setSection, isDark}) => {
     return (
         <Wrapper>
             <Link to={link} style={{margin: "1rem auto"}} onClick={() => setSection(link)}>
-            <ButtonWrapper>
+            <ButtonWrapper isDark={isDark}>
                 <Text>{text} <FontAwesomeIcon icon={faChevronRight}/></Text>
             </ButtonWrapper>
         </Link>

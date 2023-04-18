@@ -22,6 +22,11 @@ const ButtonWrapper = styled.button`
     cursor: pointer;
     width: 7rem;
     margin: 0rem 1rem;
+
+    :hover {
+        color: ${theme.colors.purple};
+        background-color: ${theme.colors.white};
+    }
 `
 
 const ButtonsWrap = styled.div`
@@ -29,20 +34,25 @@ const ButtonsWrap = styled.div`
     width: fit-content;
 `
 
-const OptionButton = ({ options }) => {
-    const [selected, setSelected] = useState(0)
+const OptionButton = ({ options, setMode, mode }) => {
+    const [selected, setSelected] = useState(1)
+
+    const _handleSet = () => {
+        setSelected(selected === 0 ? 1 : 0)
+        setMode(!mode)
+    }
 
     return (
-        <ButtonWrapper onClick={() => setSelected(selected === 0 ? 1 : 0)}>{options[selected]}</ButtonWrapper>
+        <ButtonWrapper onClick={() => _handleSet()}>{options[selected]}</ButtonWrapper>
     )
 }
 
-const OptionsBar = () => {
+const OptionsBar = ({darkMode, setDarkMode, staticMode, setStaticMode}) => {
     return (
         <OptionsBarWrap>
             <ButtonsWrap>
-                <OptionButton options={["Light", "Dark"]} />
-                <OptionButton options={["Static", "Dynamic"]} />
+                <OptionButton setMode={setDarkMode} mode={darkMode} options={["Light", "Dark"]} />
+                <OptionButton setMode={setStaticMode} mode={staticMode} options={["Dynamic", "Static"]} />
             </ButtonsWrap>
         </OptionsBarWrap>
     )

@@ -21,13 +21,13 @@ const Row = styled.div`
     display: flex;
 `
 
-const AACSection = ({setItemSelected}) => {
+const AACSection = ({setItemSelected, isDark}) => {
     return (
         <Wrapper>
             <SectionTitle>Augmentative and alternative communication (AAC) devices</SectionTitle>
             <CardsContainer>
-                <SubsectionCarousel title="Face to Face" items={AACSectionData[0]}/>
-                <SubsectionCarousel title="By Telephone" items={AACSectionData[0]}/>
+                <SubsectionCarousel title="Face to Face" items={AACSectionData[0]} isDark={isDark}/>
+                <SubsectionCarousel title="By Telephone" items={AACSectionData[0]} isDark={isDark}/>
             </CardsContainer>
         </Wrapper>
     )

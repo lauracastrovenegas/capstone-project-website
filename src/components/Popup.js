@@ -18,7 +18,8 @@ const PopupWrapper = styled.div`
 const PopupContainer = styled.div`
     width: 70vw;
     margin: auto auto;
-    background-color: white;
+    background-color: ${props => props.isDark ? 'black' : 'white'};
+    border: ${props => props.isDark ? '3px solid white' : 'none'};
     border-radius: 30px;
     z-index: 3000;
     padding: 2rem;
@@ -48,12 +49,12 @@ const Video = styled.div`
 
 `
 
-const Popup = ({ item, setItemSelected }) => {
+const Popup = ({ item, setItemSelected, isDark }) => {
 
     return (
         item ?
             <PopupWrapper onClick={() => setItemSelected(null)}>
-                <PopupContainer onClick={e => e.stopPropagation()}>
+                <PopupContainer onClick={e => e.stopPropagation()} isDark={isDark}>
                     <Close><FontAwesomeIcon icon={faX} onClick={() => setItemSelected(null)}/></Close>
                     {item.title ? <Title>{item.title}</Title> : null}
                     {item.text ? <Text>{item.text}</Text> : null}
