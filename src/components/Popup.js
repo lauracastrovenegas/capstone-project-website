@@ -4,7 +4,7 @@ import { faX } from "@fortawesome/free-solid-svg-icons"
 import YoutubeEmbed from "./YoutubeEmbed"
 
 const PopupWrapper = styled.div`
-    z-index: 200;
+    z-index: 1000;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -20,7 +20,7 @@ const PopupContainer = styled.div`
     margin: auto auto;
     background-color: white;
     border-radius: 30px;
-    z-index: 300;
+    z-index: 3000;
     padding: 2rem;
 `
 

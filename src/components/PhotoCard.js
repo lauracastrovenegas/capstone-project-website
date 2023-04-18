@@ -5,6 +5,7 @@ const CardWrapper = styled.div`
     flex-direction: column;
     padding: 1.5rem;
     background-color: white;
+    border-radius: 15px;
 
     box-shadow: 0px 67.11px 109.06px rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(216, 216, 216, 0.4);
