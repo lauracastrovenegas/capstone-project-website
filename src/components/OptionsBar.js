@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import theme from "../theme";
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 const OptionsBarWrap = styled.div`
     background-color: ${theme.colors.purple};
@@ -18,9 +18,9 @@ const ButtonWrapper = styled.button`
     border-radius: 30px;
     font-size: 1rem;
     font-weight: 800;
-    padding: 1rem 1rem;
+    padding: 0.5rem 1rem;
     cursor: pointer;
-    width: 10rem;
+    width: 7rem;
     margin: 0rem 1rem;
 `
 
@@ -29,7 +29,7 @@ const ButtonsWrap = styled.div`
     width: fit-content;
 `
 
-const OptionButton = ({options}) => {
+const OptionButton = ({ options }) => {
     const [selected, setSelected] = useState(0)
 
     return (
@@ -41,8 +41,8 @@ const OptionsBar = () => {
     return (
         <OptionsBarWrap>
             <ButtonsWrap>
-                <OptionButton options={["Light", "Dark"]}/>
-                <OptionButton options={["Static", "Dynamic"]}/>
+                <OptionButton options={["Light", "Dark"]} />
+                <OptionButton options={["Static", "Dynamic"]} />
             </ButtonsWrap>
         </OptionsBarWrap>
     )
