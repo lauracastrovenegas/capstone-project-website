@@ -3,6 +3,7 @@ import theme from "./theme";
 import GreyCallout from "./components/GreyCallout";
 import SquareCard from "./components/SquareCard";
 import ALDSection from "./components/ALDSection";
+import AACSection from "./components/AACSection";
 
 const PageWrapper = styled.div`
 
@@ -36,6 +37,7 @@ function AssistiveTech() {
                 <SquareCard>Alerting devices</SquareCard>
             </Row1>
             <ALDSection/>
+            <AACSection/>
         </PageWrapper>
     )    
 }
