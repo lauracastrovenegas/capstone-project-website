@@ -1,9 +1,10 @@
 import styled from "styled-components/macro"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faX } from "@fortawesome/free-solid-svg-icons"
+import YoutubeEmbed from "./YoutubeEmbed"
 
 const PopupWrapper = styled.div`
-    z-index: 100;
+    z-index: 200;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -19,7 +20,7 @@ const PopupContainer = styled.div`
     margin: auto auto;
     background-color: white;
     border-radius: 30px;
-    z-index: 200;
+    z-index: 300;
     padding: 2rem;
 `
 
@@ -56,7 +57,7 @@ const Popup = ({ item, setItemSelected }) => {
                     <Close><FontAwesomeIcon icon={faX} onClick={() => setItemSelected(null)}/></Close>
                     {item.title ? <Title>{item.title}</Title> : null}
                     {item.text ? <Text>{item.text}</Text> : null}
-                    {item.videoLink ? <Video>{item.videoLink}</Video> : null}
+                    {item.videoLink ? <Video><YoutubeEmbed videoLink={item.videoLink} /></Video> : null}
                 </PopupContainer>
             </PopupWrapper>
             : null
