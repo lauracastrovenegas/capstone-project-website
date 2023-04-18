@@ -52,25 +52,25 @@ const SquareWrapper = styled.div`
     }
 `
 
-const AssistiveTech = ({setSection, options}) => {
+const AssistiveTech = ({setSection, isDark}) => {
     const [itemSelected, setItemSelected] = useState(null);
 
     return (
         <PageWrapper>
-            <Popup item={itemSelected} setItemSelected={setItemSelected} isDark={options.darkMode}/>
+            <Popup item={itemSelected} setItemSelected={setItemSelected} isDark={isDark}/>
             <MainTitle>What types of <PurpleText>assistive devices</PurpleText> are available for <PurpleText>Deaf/Hard-of-Hearing</PurpleText> People?</MainTitle>
-            <GreyCallout isDark={options.darkMode}><BoldText>What is an assistive device?</BoldText> The terms assistive device or assistive technology can refer to any device that helps a person with hearing loss or a voice, speech, or language disorder to communicate. These terms often refer to devices that help a person to hear and understand what is being said more clearly or to express thoughts more easily.</GreyCallout>
+            <GreyCallout isDark={isDark}><BoldText>What is an assistive device?</BoldText> The terms assistive device or assistive technology can refer to any device that helps a person with hearing loss or a voice, speech, or language disorder to communicate. These terms often refer to devices that help a person to hear and understand what is being said more clearly or to express thoughts more easily.</GreyCallout>
             <Row1>
                 {AssistiveTechData.map((item) => (
-                    <SquareWrapper onClick={() =>  setItemSelected(item)} isDark={options.darkMode}>
+                    <SquareWrapper onClick={() =>  setItemSelected(item)} isDark={isDark}>
                         <SquareCard>{item.title}</SquareCard>
                     </SquareWrapper>
                 ))}
             </Row1>
-            <ALDSection setItemSelected={setItemSelected} isDark={options.darkMode}/>
-            <AACSection setItemSelected={setItemSelected} isDark={options.darkMode}/>
+            <ALDSection setItemSelected={setItemSelected} isDark={isDark}/>
+            <AACSection setItemSelected={setItemSelected} isDark={isDark}/>
             <ADSection setItemSelected={setItemSelected}/>
-            <NextButton text="Learn ASL" link="/asl" setSection={setSection} isDark={options.darkMode}/>
+            <NextButton text="Learn ASL" link="/asl" setSection={setSection} isDark={isDark}/>
         </PageWrapper>
     )    
 }

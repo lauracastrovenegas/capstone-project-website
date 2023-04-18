@@ -10,17 +10,17 @@ const Wrapper = styled.div`
         height: 100%;
     }
 
-    transition: transform 0.7s;
+    transition: ${props => props.isStatic ? 'none':'transform 0.7s'};
     
     :hover{
-        transform: scale(1.025);
+        transform: ${props => props.isStatic ? 'none': 'scale(1.025)'};
         cursor: pointer;
     }
 `
 
-const PhotoSquare = ({imgLink, imgAlt}) => {
+const PhotoSquare = ({imgLink, imgAlt, isStatic}) => {
     return (
-        <Wrapper>
+        <Wrapper isStatic={isStatic}>
             <img src={imgLink} alt={imgAlt}/>
         </Wrapper>
     )

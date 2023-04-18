@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AssistiveTech from './AssistiveTech';
+import AssistiveTechStatic from './AssistiveTechStatic';
 import LearnASL from './LearnASL';
 import Navbar from './components/Navbar';
 import OptionsBar from './components/OptionsBar';
@@ -26,7 +27,7 @@ const App = () => {
       </header>
       <BodyWrapper darkMode={darkMode}>
         <Routes>
-        <Route exact path="/" element={<AssistiveTech setSection={setSection} options={{staticMode:staticMode, darkMode:darkMode}}/>} />
+        <Route exact path="/" element={staticMode ? <AssistiveTechStatic setSection={setSection} isDark={darkMode}/> : <AssistiveTech setSection={setSection} isDark={darkMode}/>} />
         <Route exact path="/asl" element={<LearnASL setSection={setSection} options={{staticMode:staticMode, darkMode:darkMode}}/>} />
       </Routes>
       </BodyWrapper>
