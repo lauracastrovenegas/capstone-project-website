@@ -1,4 +1,4 @@
-function LearnASL() {
+const LearnASL = ({setSection}) => {
     return (
         <div>
             Learn ASL
