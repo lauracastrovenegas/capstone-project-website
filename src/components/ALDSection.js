@@ -13,27 +13,25 @@ const SectionTitle = styled.h2`
 `
 
 const CardsContainer = styled.div`
-
-
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 `
 
-const Row = styled.div`
-    display: flex;
+const CardContainer = styled.div`
+    flex: 1;
+    margin: 2rem;
 `
 
-const ALDSection = () => {
+const ALDSection = ({ setItemSelected }) => {
     return (
         <Wrapper>
             <SectionTitle>Assistive listening devices (ALDs)</SectionTitle>
             <CardsContainer>
-                <Row>
-                    <PhotoCard imgLink={ALDsSectionData[0].imgLink} imgAlt={ALDsSectionData[0].imgAlt} text={ALDsSectionData[0].text}/>
-                    <PhotoCard imgLink={ALDsSectionData[1].imgLink} imgAlt={ALDsSectionData[1].imgAlt} text={ALDsSectionData[1].text}/>
-                </Row>
-                <Row>
-                    <PhotoCard imgLink={ALDsSectionData[2].imgLink} imgAlt={ALDsSectionData[2].imgAlt} text={ALDsSectionData[2].text}/>
-                    <PhotoCard imgLink={ALDsSectionData[3].imgLink} imgAlt={ALDsSectionData[3].imgAlt} text={ALDsSectionData[3].text}/>
-                </Row>
+                {ALDsSectionData.map((section) => (
+                    <CardContainer onClick={() => setItemSelected(section)}>
+                        <PhotoCard imgLink={section.imgLink} imgAlt={section.imgAlt} text={section.title} />
+                    </CardContainer>
+                ))}
             </CardsContainer>
         </Wrapper>
     )
