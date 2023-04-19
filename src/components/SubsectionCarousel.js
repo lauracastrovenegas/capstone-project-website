@@ -11,7 +11,7 @@ const Wrapper = styled.div`
     margin: 2rem;
 `
 
-const Title = styled.h4`
+const Title = styled.h3`
     color: ${props => props.isDark ? theme.colors.lightPurple : theme.colors.purple};
     text-align: center;
     margin: 1rem;
