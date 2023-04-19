@@ -5,7 +5,6 @@ import React, { useState } from "react";
 const OptionsBarWrap = styled.div`
     background-color: ${theme.colors.purple};
     display: flex;
-    width: 100vw;
     padding: 1rem 1rem;
 `
 
