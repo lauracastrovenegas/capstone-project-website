@@ -67,13 +67,13 @@ const AACSectionData = [
     [
         {
             imgLink: pecs,
-            imgAlt: "a chart of 6 images below the sentence I want blank. The 6 images are of a tricycle, golfclubs, a trampoline, a bubble blower, a sand and water table, and a bucket of sidewalk chalk",
+            imgAlt: "a chart of 6 images below the sentence I want blank used for visual communication",
             title: "Picture Exchange Communication Systems",
             videoLink: "",
         },
         {
             imgLink: commbinder,
-            imgAlt: "a communication binder with cards of different images that are used by nonverbal people, like austistic kids, to communicate",
+            imgAlt: "a communication binder with cards of different images used by nonverbal people to communicate",
             title: "Homemade binders of picture symbols",
             videoLink: "",
         },
@@ -139,7 +139,7 @@ const ADSectionData = [
     },
     {
         imgLink: doorbell,
-        imgAlt: "a doorbell system, the doorbell button and the light that would flash once someone rings the doorbell",
+        imgAlt: "a doorbell system, flashes light once someone rings the doorbell",
         title: "Doorbell signaler",
         videoLink: "https://www.youtube.com/embed/nVFfYmkGURc",
     },
@@ -151,7 +151,7 @@ const ADSectionData = [
     },
     {
         imgLink: wakeupalarm,
-        imgAlt: "a digital alarm clock with a vibrational attachment that is placed under the pillow or on the bed to shake the user awake",
+        imgAlt: "a digital alarm clock with a vibrational attachment to shake the user awake",
         title: "Wake-up alarm signaler",
         videoLink: "https://www.youtube.com/embed/ijUwGqxJggw",
     },

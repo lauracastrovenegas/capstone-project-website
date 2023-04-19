@@ -85,12 +85,12 @@ const LearnASL = ({setSection, options}) => {
         <Videos>
             {ASLVideos.map((video) => (
             <Video>
-                <Subtitle><PurpleText>{video.title}</PurpleText></Subtitle>
+                <Subtitle2><PurpleText>{video.title}</PurpleText></Subtitle2>
                 <YoutubeEmbed videoLink={video.videoLink}/>
             </Video>
         ))}
         </Videos>
-        <Subtitle2>Youtube ASL Teachers</Subtitle2>
+        <Subtitle>Youtube ASL Teachers</Subtitle>
         <Row>
             {ASLYoutubers.map((youtuber) => (
                 <Image href={youtuber.link}><img src={youtuber.imgLink} alt={`${youtuber.name}'s youtube profile`}/></Image>
