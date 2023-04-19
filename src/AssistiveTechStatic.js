@@ -80,13 +80,13 @@ const AssistiveTechStatic = ({ setSection, isDark }) => {
             <Subtitle isDark={isDark}>{"Face to Face"}</Subtitle>
             <Grid>
                 {AACSectionData[0].map((item) => (
-                    <PhotoSquare imgAlt={item.imgAlt} imgLink={item.imgLink} isStatic/>
+                    <PhotoSquare imgAlt={item.imgAlt} imgLink={item.imgLink} title={item.title} isStatic/>
                 ))}
             </Grid>
             <Subtitle isDark={isDark}>{"By Telephone"}</Subtitle>
             <Grid>
                 {AACSectionData[1].map((item) => (
-                    <PhotoSquare imgAlt={item.imgAlt} imgLink={item.imgLink} isStatic/>
+                    <PhotoSquare imgAlt={item.imgAlt} imgLink={item.imgLink} title={item.title} isStatic/>
                 ))}
             </Grid>
 

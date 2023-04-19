@@ -9,6 +9,11 @@ import pecs from "./assets/pecs.jpeg"
 import recordedspeech from "./assets/recordedspeech.png"
 import speechgen from "./assets/speechgen.png"
 
+import asltotext from "./assets/asltotext.jpeg"
+import captionedtel from "./assets/captionedtel.jpeg"
+import textmessage from "./assets/textmessage.png"
+import ttymachine from "./assets/ttymachine.jpg"
+
 const AssistiveTechData = [
     {
         title: "Assistive listening devices (ALDs)",
@@ -86,27 +91,27 @@ const AACSectionData = [
     ],
     [
         {
-            imgLink: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/VTUZB27OH5HXJP64JHWC7QGHLA.jpg",
+            imgLink: ttymachine,
             imgAlt: "",
-            text: "Hearing loop (or induction loop) systems",
+            title: "TTY or TDD Machines",
             videoLink: "",
         },
         {
-            imgLink: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/VTUZB27OH5HXJP64JHWC7QGHLA.jpg",
+            imgLink: textmessage,
             imgAlt: "",
-            text: "FM Systems",
+            title: "Text Messaging",
             videoLink: "",
         },
         {
-            imgLink: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/VTUZB27OH5HXJP64JHWC7QGHLA.jpg",
+            imgLink: asltotext,
             imgAlt: "",
-            text: "Infrared Systems",
+            title: "Translation from ASL to Text, and viceversa",
             videoLink: "",
         },
         {
-            imgLink: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/VTUZB27OH5HXJP64JHWC7QGHLA.jpg",
+            imgLink: captionedtel,
             imgAlt: "",
-            text: "Personal amplifiers",
+            title: "Captioned Telephones",
             videoLink: "",
         }
     ]
@@ -114,33 +119,27 @@ const AACSectionData = [
 
 const ADSectionData = [
     {
-        imgLink: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/VTUZB27OH5HXJP64JHWC7QGHLA.jpg",
+        imgLink: ttymachine,
         imgAlt: "",
-        title: "Hearing loop (or induction loop) systems",
+        title: "TTY or TDD Machines",
         videoLink: "",
     },
     {
-        imgLink: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/VTUZB27OH5HXJP64JHWC7QGHLA.jpg",
+        imgLink: textmessage,
         imgAlt: "",
-        title: "FM Systems",
+        title: "Text Messaging",
         videoLink: "",
     },
     {
-        imgLink: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/VTUZB27OH5HXJP64JHWC7QGHLA.jpg",
+        imgLink: asltotext,
         imgAlt: "",
-        title: "Infrared Systems",
+        title: "Translation from ASL to Text, and viceversa",
         videoLink: "",
     },
     {
-        imgLink: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/VTUZB27OH5HXJP64JHWC7QGHLA.jpg",
+        imgLink: captionedtel,
         imgAlt: "",
-        title: "Personal amplifiers",
-        videoLink: "",
-    },
-    {
-        imgLink: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/VTUZB27OH5HXJP64JHWC7QGHLA.jpg",
-        imgAlt: "",
-        title: "Personal amplifiers",
+        title: "Captioned Telephones",
         videoLink: "",
     }
 ]
