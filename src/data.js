@@ -1,3 +1,14 @@
+import fmsystem from "./assets/fmsystem.png"
+import hearingloop from "./assets/hearingloop.png"
+import infraredsystem from "./assets/infraredsystem.jpeg"
+import personalamp from "./assets/personalamp.jpg"
+
+import commbinder from "./assets/commbinder.png"
+import electablet from "./assets/electablet.png"
+import pecs from "./assets/pecs.jpeg"
+import recordedspeech from "./assets/recordedspeech.png"
+import speechgen from "./assets/speechgen.png"
+
 const AssistiveTechData = [
     {
         title: "Assistive listening devices (ALDs)",
@@ -15,25 +26,25 @@ const AssistiveTechData = [
 
 const ALDsSectionData = [
     {
-        imgLink: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/VTUZB27OH5HXJP64JHWC7QGHLA.jpg",
+        imgLink: hearingloop,
         imgAlt: "",
         title: "Hearing loop systems",
         videoLink: "https://www.youtube.com/embed/ifBKOomw8SY?start=43",
     },
     {
-        imgLink: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/VTUZB27OH5HXJP64JHWC7QGHLA.jpg",
+        imgLink: fmsystem,
         imgAlt: "",
         title: "FM Systems",
         videoLink: "https://www.youtube.com/embed/JNzxOJKCUug",
     },
     {
-        imgLink: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/VTUZB27OH5HXJP64JHWC7QGHLA.jpg",
+        imgLink: infraredsystem,
         imgAlt: "",
         title: "Infrared Systems",
         videoLink: "https://www.youtube.com/embed/LM03-EC73To?start=389",
     },
     {
-        imgLink: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/VTUZB27OH5HXJP64JHWC7QGHLA.jpg",
+        imgLink: personalamp,
         imgAlt: "",
         title: "Personal amplifiers",
         videoLink: "https://www.youtube.com/embed/ifBKOomw8SY?start=43",
@@ -43,27 +54,33 @@ const ALDsSectionData = [
 const AACSectionData = [
     [
         {
-            imgLink: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/VTUZB27OH5HXJP64JHWC7QGHLA.jpg",
+            imgLink: pecs,
             imgAlt: "",
-            text: "Hearing loop (or induction loop) systems",
+            title: "Picture Exchange Communication Systems",
             videoLink: "",
         },
         {
-            imgLink: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/VTUZB27OH5HXJP64JHWC7QGHLA.jpg",
+            imgLink: commbinder,
             imgAlt: "",
-            text: "FM Systems",
+            title: "Homemade binders of picture symbols",
             videoLink: "",
         },
         {
-            imgLink: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/VTUZB27OH5HXJP64JHWC7QGHLA.jpg",
+            imgLink: recordedspeech,
             imgAlt: "",
-            text: "Infrared Systems",
+            title: "Recorded Speech Devices",
             videoLink: "",
         },
         {
-            imgLink: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/VTUZB27OH5HXJP64JHWC7QGHLA.jpg",
+            imgLink: electablet,
             imgAlt: "",
-            text: "Personal amplifiers",
+            title: "Electronic Tablet Speech Apps",
+            videoLink: "",
+        },
+        {
+            imgLink: speechgen,
+            imgAlt: "",
+            title: "Speech Generating Devices",
             videoLink: "",
         }
     ],
