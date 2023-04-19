@@ -26,10 +26,12 @@ const App = () => {
         <Navbar setSection={setSection} currentSection={currentSection} isDark={darkMode}/>
       </header>
       <BodyWrapper darkMode={darkMode}>
-        <Routes>
+      {staticMode ? <AssistiveTechStatic setSection={setSection} isDark={darkMode}/> : <AssistiveTech setSection={setSection} isDark={darkMode}/>}
+      {<LearnASL setSection={setSection} options={{staticMode:staticMode, darkMode:darkMode}}/>}
+        {/* <Routes>
         <Route exact path="/" element={staticMode ? <AssistiveTechStatic setSection={setSection} isDark={darkMode}/> : <AssistiveTech setSection={setSection} isDark={darkMode}/>} />
         <Route exact path="/asl" element={<LearnASL setSection={setSection} options={{staticMode:staticMode, darkMode:darkMode}}/>} />
-      </Routes>
+      </Routes> */}
       </BodyWrapper>
     </BrowserRouter>
   );
