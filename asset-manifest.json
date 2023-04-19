@@ -1,16 +1,34 @@
 {
   "files": {
     "main.css": "/static/css/main.2be6437f.css",
-    "main.js": "/static/js/main.1bbae3a2.js",
+    "main.js": "/static/js/main.ea966b58.js",
+    "static/media/commbinder.png": "/static/media/commbinder.366329c90f89e8e0b75b.png",
+    "static/media/textmessage.png": "/static/media/textmessage.b873a9be526fabf83bf4.png",
+    "static/media/fmsystem.png": "/static/media/fmsystem.c6e698ab699e4f9a6b0c.png",
+    "static/media/speechgen.png": "/static/media/speechgen.700dfbcc67cf5b95a9ba.png",
+    "static/media/electablet.png": "/static/media/electablet.4fb638397d576761122c.png",
+    "static/media/wakeupalarm.jpeg": "/static/media/wakeupalarm.782c3737d04c34c76465.jpeg",
+    "static/media/recordedspeech.png": "/static/media/recordedspeech.54f727bf69f22aba8395.png",
+    "static/media/captionedtel.jpeg": "/static/media/captionedtel.33c44f1d150864a8a787.jpeg",
+    "static/media/babycrying.jpeg": "/static/media/babycrying.4a302df5cab5fb4d7cc0.jpeg",
+    "static/media/hearingloop.png": "/static/media/hearingloop.fca97709087e44beeb08.png",
+    "static/media/personalamp.jpg": "/static/media/personalamp.260b05834f69257189b7.jpg",
+    "static/media/doorbell.jpeg": "/static/media/doorbell.8493e7ccedf2c732b3d3.jpeg",
+    "static/media/pecs.jpeg": "/static/media/pecs.7d49fc1c7983a5588a46.jpeg",
+    "static/media/asltotext.jpeg": "/static/media/asltotext.89cb85d85ba34249029e.jpeg",
+    "static/media/phonesignaler.jpeg": "/static/media/phonesignaler.b24e20a19d8299d2aeea.jpeg",
+    "static/media/weather.jpeg": "/static/media/weather.f0362d45dc674c118a2a.jpeg",
+    "static/media/carbonmonox.jpeg": "/static/media/carbonmonox.6c7d19af1dd16e183a3b.jpeg",
+    "static/media/ttymachine.jpg": "/static/media/ttymachine.09360dc3d3a070913cb2.jpg",
     "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
     "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/index.html",
     "main.2be6437f.css.map": "/static/css/main.2be6437f.css.map",
-    "main.1bbae3a2.js.map": "/static/js/main.1bbae3a2.js.map"
+    "main.ea966b58.js.map": "/static/js/main.ea966b58.js.map"
   },
   "entrypoints": [
     "static/css/main.2be6437f.css",
-    "static/js/main.1bbae3a2.js"
+    "static/js/main.ea966b58.js"
   ]
 }
