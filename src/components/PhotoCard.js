@@ -21,6 +21,7 @@ const CardWrapper = styled.div`
 `
 
 const Image = styled.div`
+    height: 25vw;
 
     img {
         width: 100%;
