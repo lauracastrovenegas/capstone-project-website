@@ -26,7 +26,7 @@ const ADSection = ({setItemSelected}) => {
             <CardsContainer>
                 {ADSectionData.map((item) => (
                     <div onClick={() => setItemSelected(item)}>
-                        <PhotoSquare imgLink={item.imgLink} imgAlt={item.imgAlt}/>
+                        <PhotoSquare imgLink={item.imgLink} imgAlt={item.imgAlt} title={item.title} clickable/>
                     </div>
                 ))}
             </CardsContainer>
