@@ -48,7 +48,7 @@ const OptionButton = ({ options, setMode, mode }) => {
 
 const OptionsBar = ({darkMode, setDarkMode, staticMode, setStaticMode}) => {
     return (
-        <OptionsBarWrap>
+        <OptionsBarWrap role="toolbar">
             <ButtonsWrap>
                 <OptionButton setMode={setDarkMode} mode={darkMode} options={["Light", "Dark"]} />
                 <OptionButton setMode={setStaticMode} mode={staticMode} options={["Dynamic", "Static"]} />

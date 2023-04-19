@@ -53,7 +53,7 @@ const Popup = ({ item, setItemSelected, isDark }) => {
 
     return (
         item ?
-            <PopupWrapper onClick={() => setItemSelected(null)}>
+            <PopupWrapper aria-hidden={item} role="dialog" tabindex={item ? 0 : -1} onClick={() => setItemSelected(null)}>
                 <PopupContainer onClick={e => e.stopPropagation()} isDark={isDark}>
                     <Close><FontAwesomeIcon icon={faX} onClick={() => setItemSelected(null)}/></Close>
                     {item.title ? <Title>{item.title}</Title> : null}

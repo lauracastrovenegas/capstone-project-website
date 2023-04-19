@@ -59,7 +59,7 @@ const AssistiveTech = ({setSection, isDark}) => {
         <PageWrapper>
             <Popup item={itemSelected} setItemSelected={setItemSelected} isDark={isDark}/>
             <MainTitle>What types of <PurpleText>assistive devices</PurpleText> are available for <PurpleText>Deaf/Hard-of-Hearing</PurpleText> People?</MainTitle>
-            <GreyCallout isDark={isDark}><BoldText>What is an assistive device?</BoldText> The terms assistive device or assistive technology can refer to any device that helps a person with hearing loss or a voice, speech, or language disorder to communicate. These terms often refer to devices that help a person to hear and understand what is being said more clearly or to express thoughts more easily.</GreyCallout>
+            <GreyCallout isDark={isDark}><BoldText role="purple heading text">What is an assistive device?</BoldText> The terms assistive device or assistive technology can refer to any device that helps a person with hearing loss or a voice, speech, or language disorder to communicate. These terms often refer to devices that help a person to hear and understand what is being said more clearly or to express thoughts more easily.</GreyCallout>
             <Row1>
                 {AssistiveTechData.map((item) => (
                     <SquareWrapper onClick={() =>  setItemSelected(item)} isDark={isDark}>

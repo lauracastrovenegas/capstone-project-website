@@ -57,11 +57,11 @@ const LeftArrowWrapper = styled.div`
 `
 
 const CustomRightArrow = ({ onClick, ...rest }) => {
-    return <ArrowWrapper onClick={() => onClick()}><FontAwesomeIcon icon={faChevronRight}/></ArrowWrapper>;
+    return <ArrowWrapper aria-label="next item button" onClick={() => onClick()}><FontAwesomeIcon icon={faChevronRight}/></ArrowWrapper>;
 };
 
 const CustomLeftArrow = ({ onClick, ...rest }) => {
-    return <LeftArrowWrapper onClick={() => onClick()}><FontAwesomeIcon icon={faChevronLeft}/></LeftArrowWrapper>;
+    return <LeftArrowWrapper aria-label="previous item button" onClick={() => onClick()}><FontAwesomeIcon icon={faChevronLeft}/></LeftArrowWrapper>;
 };
 
 const SubsectionCarousel = ({title, items, isDark}) => {
@@ -69,7 +69,7 @@ const SubsectionCarousel = ({title, items, isDark}) => {
         <Wrapper>
             <Title isDark={isDark}>{title}</Title>
             <CarouselWrapper>
-            <Carousel responsive={responsive} infinite showDots keyBoardControl customRightArrow={<CustomRightArrow />} customLeftArrow={<CustomLeftArrow/>}>
+            <Carousel aria-label="carousel" responsive={responsive} infinite showDots keyBoardControl customRightArrow={<CustomRightArrow />} customLeftArrow={<CustomLeftArrow/>}>
                 {items.map((item) => (
                     <PhotoSquare imgLink={item.imgLink} imgAlt={item.imgAlt} title={item.title}/>
                 ))}

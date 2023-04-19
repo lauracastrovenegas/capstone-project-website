@@ -30,7 +30,7 @@ const ButtonWrapper = styled.button`
 const Button = ({text, link, currentSection, setSection, isDark}) => {
 
     return (
-        <Link to={link} style={{margin: "1rem auto"}} onClick={() => setSection(link)}>
+        <Link aria-label={`go to ${text} tab`} to={link} style={{margin: "1rem auto"}} onClick={() => setSection(link)}>
             <ButtonWrapper isActive={currentSection === link} isDark={isDark}>{text}</ButtonWrapper>
         </Link>
     )
