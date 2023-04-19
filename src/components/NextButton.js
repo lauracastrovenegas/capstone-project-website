@@ -6,6 +6,7 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 const Wrapper = styled.div`
     display: flex;
+    margin-top: 2rem;
 `
 
 const ButtonWrapper = styled.button`
