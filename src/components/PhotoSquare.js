@@ -1,9 +1,9 @@
 import styled from "styled-components"
 import theme from "../theme"
 
-const PhotoSquare = ({imgLink, imgAlt, title, isStatic}) => {
+const PhotoSquare = ({imgLink, imgAlt, title, isStatic, clickable}) => {
     return (
-        <Wrapper isStatic={isStatic}>
+        <Wrapper isStatic={isStatic} isClickable={clickable}>
                 <Image>
                     <img className="container" src={imgLink} alt={imgAlt}/>
                     <Content className='text'>
@@ -30,6 +30,7 @@ const Wrapper = styled.div`
     }
 
     :hover{
+        cursor: ${props => props.isClickable ? 'pointer': 'mouse'};
         .container {
             filter: ${props => props.isStatic ? 'none': 'brightness(50%)'};
         }
