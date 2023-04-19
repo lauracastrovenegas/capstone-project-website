@@ -7,9 +7,12 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 const Wrapper = styled.div`
     display: flex;
     margin-top: 2rem;
+    a {
+        text-decoration: none;
+    }
 `
 
-const ButtonWrapper = styled.button`
+const ButtonWrapper = styled.div`
     color: ${theme.colors.purple};
     background-color: ${props => props.isDark ? theme.colors.black : theme.colors.white};
     border-color: ${theme.colors.purple};
@@ -42,7 +45,7 @@ const Text = styled.div`
 const NextButton = ({text, link, setSection, isDark}) => {
     return (
         <Wrapper>
-            <Link to={link} style={{margin: "1rem auto"}} onClick={() => setSection(link)}>
+            <Link aria-label={`go to ${text} tab`} to={link} style={{margin: "1rem auto"}} onClick={() => setSection(link)}>
             <ButtonWrapper isDark={isDark}>
                 <Text>{text} <FontAwesomeIcon icon={faChevronRight}/></Text>
             </ButtonWrapper>
