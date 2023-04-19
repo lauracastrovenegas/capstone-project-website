@@ -27,7 +27,7 @@ const AACSection = ({setItemSelected, isDark}) => {
             <SectionTitle>Augmentative and alternative communication (AAC) devices</SectionTitle>
             <CardsContainer>
                 <SubsectionCarousel title="Face to Face" items={AACSectionData[0]} isDark={isDark}/>
-                <SubsectionCarousel title="By Telephone" items={AACSectionData[0]} isDark={isDark}/>
+                <SubsectionCarousel title="By Telephone" items={AACSectionData[1]} isDark={isDark}/>
             </CardsContainer>
         </Wrapper>
     )
