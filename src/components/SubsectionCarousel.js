@@ -71,7 +71,7 @@ const SubsectionCarousel = ({title, items, isDark}) => {
             <CarouselWrapper>
             <Carousel responsive={responsive} infinite showDots keyBoardControl customRightArrow={<CustomRightArrow />} customLeftArrow={<CustomLeftArrow/>}>
                 {items.map((item) => (
-                    <PhotoSquare imgLink={item.imgLink} imgAlt={item.imgLink} title={item.title}/>
+                    <PhotoSquare imgLink={item.imgLink} imgAlt={item.imgAlt} title={item.title}/>
                 ))}
             </Carousel>
             </CarouselWrapper>

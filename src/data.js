@@ -39,25 +39,25 @@ const AssistiveTechData = [
 const ALDsSectionData = [
     {
         imgLink: hearingloop,
-        imgAlt: "",
+        imgAlt: "hearing loop symbol, an ear with a letter T beside it",
         title: "Hearing loop systems",
         videoLink: "https://www.youtube.com/embed/ifBKOomw8SY?start=43",
     },
     {
         imgLink: fmsystem,
-        imgAlt: "",
+        imgAlt: "parent holding roger fm system to child's ear, child has a hearing aid",
         title: "FM Systems",
         videoLink: "https://www.youtube.com/embed/JNzxOJKCUug",
     },
     {
         imgLink: infraredsystem,
-        imgAlt: "",
+        imgAlt: "infrared system symbol, an ear with three squiggle arrows going into it",
         title: "Infrared Systems",
         videoLink: "https://www.youtube.com/embed/LM03-EC73To?start=389",
     },
     {
         imgLink: personalamp,
-        imgAlt: "",
+        imgAlt: "an iPhone standing with a personal amplifier next to it, a pair of ear amplifiers",
         title: "Personal amplifiers",
         videoLink: "https://www.youtube.com/embed/ifBKOomw8SY?start=43",
     }
@@ -67,31 +67,31 @@ const AACSectionData = [
     [
         {
             imgLink: pecs,
-            imgAlt: "",
+            imgAlt: "a chart of 6 images below the sentence I want blank. The 6 images are of a tricycle, golfclubs, a trampoline, a bubble blower, a sand and water table, and a bucket of sidewalk chalk",
             title: "Picture Exchange Communication Systems",
             videoLink: "",
         },
         {
             imgLink: commbinder,
-            imgAlt: "",
+            imgAlt: "a communication binder with cards of different images that are used by nonverbal people, like austistic kids, to communicate",
             title: "Homemade binders of picture symbols",
             videoLink: "",
         },
         {
             imgLink: recordedspeech,
-            imgAlt: "",
+            imgAlt: "a recorded speech device with five options",
             title: "Recorded Speech Devices",
             videoLink: "",
         },
         {
             imgLink: electablet,
-            imgAlt: "",
+            imgAlt: "an iPad being held by a person, the iPad showing a speech app",
             title: "Electronic Tablet Speech Apps",
             videoLink: "",
         },
         {
             imgLink: speechgen,
-            imgAlt: "",
+            imgAlt: "a speech generating device with a physical keyboard and a screen that says How do you do?",
             title: "Speech Generating Devices",
             videoLink: "",
         }
@@ -99,25 +99,25 @@ const AACSectionData = [
     [
         {
             imgLink: ttymachine,
-            imgAlt: "",
+            imgAlt: "a black and white TTY machine with a handheld chord phone, a keyboard, and screen",
             title: "TTY or TDD Machines",
             videoLink: "",
         },
         {
             imgLink: textmessage,
-            imgAlt: "",
+            imgAlt: "a hand holding an iPhone open to a text message conversation",
             title: "Text Messaging",
             videoLink: "",
         },
         {
             imgLink: asltotext,
-            imgAlt: "",
+            imgAlt: "a hand holding a phone open to an app that translates ASL to text and back",
             title: "Translation from ASL to Text, and viceversa",
             videoLink: "",
         },
         {
             imgLink: captionedtel,
-            imgAlt: "",
+            imgAlt: "a captioned telephone with a handheld chord telephone and a digital screen displaying text",
             title: "Captioned Telephones",
             videoLink: "",
         }
@@ -127,37 +127,37 @@ const AACSectionData = [
 const ADSectionData = [
     {
         imgLink: babycrying,
-        imgAlt: "",
+        imgAlt: "blonde woman sleeping on her side with a baby cry signaler on her night stand",
         title: "Baby Cry Signaler",
         videoLink: "https://storage.googleapis.com/diglo-videos/diglo-mastheads-amber-and-baby.mp4",
     },
     {
         imgLink: carbonmonox,
-        imgAlt: "",
+        imgAlt: "carbon monoxide detector with a light in the middle that would flash in case on an emergency",
         title: "Carbon monoxide detector",
         videoLink: "https://storage.googleapis.com/diglo-videos/diglo-mastheads-hellings.mp4",
     },
     {
         imgLink: doorbell,
-        imgAlt: "",
+        imgAlt: "a doorbell system, the doorbell button and the light that would flash once someone rings the doorbell",
         title: "Doorbell signaler",
         videoLink: "https://www.youtube.com/embed/nVFfYmkGURc",
     },
     {
         imgLink: phonesignaler,
-        imgAlt: "",
+        imgAlt: "iPhone on top of a phone signaler, which flashes light when the phone rings",
         title: "Telephone signaler",
         videoLink: "https://www.youtube.com/embed/dwmKZb1k0uo",
     },
     {
         imgLink: wakeupalarm,
-        imgAlt: "",
+        imgAlt: "a digital alarm clock with a vibrational attachment that is placed under the pillow or on the bed to shake the user awake",
         title: "Wake-up alarm signaler",
         videoLink: "https://www.youtube.com/embed/ijUwGqxJggw",
     },
     {
         imgLink: weather,
-        imgAlt: "",
+        imgAlt: "a weather alert device with a digital display that read tornado",
         title: "Weather alert",
         videoLink: "https://www.youtube.com/embed/HG41J6Na4E",
     }
