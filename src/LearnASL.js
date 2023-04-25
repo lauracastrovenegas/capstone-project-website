@@ -94,7 +94,7 @@ const LearnASL = ({ isDark }) => {
 
     return (
         <PageWrapper>
-            <MainTitle>Learn <PurpleText isDark={isDark}>American Sign Language</PurpleText></MainTitle>
+            <MainTitle id="main">Learn <PurpleText isDark={isDark}>American Sign Language</PurpleText></MainTitle>
             <Subtitle>Learn your first 10 words/phrases in ASL</Subtitle>
             <Text>One of the easiest ways to learn sign language is through YouTube tutorials. The video hosting site has dozens of teachers who give free lessons on how to sign the alphabet, common phrases, numbers, and more.</Text>
             <SkipLink href="#asl-videos">Skip to ASL Videos</SkipLink>
