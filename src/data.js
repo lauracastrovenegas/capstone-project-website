@@ -41,7 +41,7 @@ const ALDsSectionData = [
         imgLink: hearingloop,
         imgAlt: "hearing loop symbol, an ear with a letter T beside it",
         title: "Hearing loop systems",
-        videoLink: "https://www.youtube.com/embed/ifBKOomw8SY?start=43",
+        videoLink: "https://www.youtube.com/embed/-1MvSvRhpyU",
     },
     {
         imgLink: fmsystem,
@@ -159,7 +159,7 @@ const ADSectionData = [
         imgLink: weather,
         imgAlt: "a weather alert device with a digital display that read tornado",
         title: "Weather alert",
-        videoLink: "https://www.youtube.com/embed/HG41J6Na4E",
+        videoLink: "https://www.youtube.com/embed/Ii1IsOiNUL0",
     }
 ]
 
