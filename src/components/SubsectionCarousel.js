@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import theme from "../theme";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -22,7 +22,7 @@ const CarouselWrapper = styled.div`
 
 `
 
-const ArrowWrapper = styled.div`
+const ArrowWrapper = styled.button`
     position:absolute; 
     z-index:10;
     right: 0;
@@ -39,7 +39,7 @@ const ArrowWrapper = styled.div`
     }
 `
 
-const LeftArrowWrapper = styled.div`
+const LeftArrowWrapper = styled.button`
     position:absolute; 
     z-index:10;
     left:0;

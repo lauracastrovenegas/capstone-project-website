@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import theme from "./theme";
 import GreyCallout from "./components/GreyCallout";
 import SquareCard from "./components/SquareCard";
@@ -32,7 +32,7 @@ const Row1 = styled.div`
     display: flex;
 `
 
-const SquareWrapper = styled.div`
+const SquareWrapper = styled.button`
     display: flex;
     background-color: ${props => props.isDark ? "black" : "white"};
     border-radius: 15px;
@@ -52,13 +52,22 @@ const SquareWrapper = styled.div`
     }
 `
 
+const SkipLink = styled.a`
+  margin-right: 1rem;
+  opacity: 0;
+
+  &:focus {
+    opacity: 1;
+  }
+`
+
 const AssistiveTech = ({setSection, isDark}) => {
     const [itemSelected, setItemSelected] = useState(null);
 
     return (
         <PageWrapper>
             <Popup item={itemSelected} setItemSelected={setItemSelected} isDark={isDark}/>
-            <MainTitle>What types of <PurpleText isDark={isDark}>assistive devices</PurpleText> are available for <PurpleText isDark={isDark}>Deaf/Hard-of-Hearing</PurpleText> People?</MainTitle>
+            <MainTitle id="main">What types of <PurpleText isDark={isDark}>assistive devices</PurpleText> are available for <PurpleText isDark={isDark}>Deaf/Hard-of-Hearing</PurpleText> People?</MainTitle>
             <GreyCallout isDark={isDark}><BoldText role="heading">What is an assistive device?</BoldText> The terms assistive device or assistive technology can refer to any device that helps a person with hearing loss or a voice, speech, or language disorder to communicate. These terms often refer to devices that help a person to hear and understand what is being said more clearly or to express thoughts more easily.</GreyCallout>
             <Row1>
                 {AssistiveTechData.map((item) => (
@@ -67,6 +76,9 @@ const AssistiveTech = ({setSection, isDark}) => {
                     </SquareWrapper>
                 ))}
             </Row1>
+            <SkipLink href="#ALD">Skip to Assistive listening devices</SkipLink>
+            <SkipLink href="#AAC">Skip to Augmentative and alternative communication devices</SkipLink>
+            <SkipLink href="#AD">Skip to Alerting Devices</SkipLink>
             <ALDSection setItemSelected={setItemSelected} isDark={isDark}/>
             <AACSection setItemSelected={setItemSelected} isDark={isDark}/>
             <ADSection setItemSelected={setItemSelected}/>

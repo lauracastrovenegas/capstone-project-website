@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import theme from "./theme";
 import GreyCallout from "./components/GreyCallout";
 import NextButton from "./components/NextButton";
@@ -57,15 +57,27 @@ const Grid = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
 `
 
+const SkipLink = styled.a`
+  margin-right: 1rem;
+  opacity: 0;
+
+  &:focus {
+    opacity: 1;
+  }
+`
+
 const AssistiveTechStatic = ({ setSection, isDark }) => {
     const [itemSelected, setItemSelected] = useState(null);
 
     return (
         <PageWrapper>
             <Popup item={itemSelected} setItemSelected={setItemSelected} isDark={isDark} />
-            <MainTitle>What types of <PurpleText isDark={isDark}>assistive devices</PurpleText> are available for <PurpleText isDark={isDark}>Deaf/Hard-of-Hearing</PurpleText> People?</MainTitle>
+            <MainTitle id="main">What types of <PurpleText isDark={isDark}>assistive devices</PurpleText> are available for <PurpleText isDark={isDark}>Deaf/Hard-of-Hearing</PurpleText> People?</MainTitle>
             <GreyCallout isDark={isDark}><BoldText role="heading">What is an assistive device?</BoldText> The terms assistive device or assistive technology can refer to any device that helps a person with hearing loss or a voice, speech, or language disorder to communicate. These terms often refer to devices that help a person to hear and understand what is being said more clearly or to express thoughts more easily.</GreyCallout>
-            <SectionTitle>{AssistiveTechData[0].title}</SectionTitle>
+            <SkipLink href="#ALD">Skip to Assistive listening devices</SkipLink>
+            <SkipLink href="#AAC">Skip to Augmentative and alternative communication devices</SkipLink>
+            <SkipLink href="#AD">Skip to Alerting Devices</SkipLink>
+            <SectionTitle id="ALD">{AssistiveTechData[0].title}</SectionTitle>
             <Text>{AssistiveTechData[0].text}</Text>
             {ALDsSectionData.map((item) => (
                 <>
@@ -75,7 +87,7 @@ const AssistiveTechStatic = ({ setSection, isDark }) => {
                 </>
             ))}
 
-            <SectionTitle>{AssistiveTechData[1].title}</SectionTitle>
+            <SectionTitle id="AAC">{AssistiveTechData[1].title}</SectionTitle>
             <Text>{AssistiveTechData[1].text}</Text>
             <Subtitle isDark={isDark}>{"Face to Face"}</Subtitle>
             <Grid>
@@ -91,7 +103,7 @@ const AssistiveTechStatic = ({ setSection, isDark }) => {
             </Grid>
 
 
-            <SectionTitle>{AssistiveTechData[2].title}</SectionTitle>
+            <SectionTitle id="AD">{AssistiveTechData[2].title}</SectionTitle>
             <Text>{AssistiveTechData[2].text}</Text>
             {ADSectionData.map((item) => (
                 <>

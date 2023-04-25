@@ -17,14 +17,16 @@ const CardsContainer = styled.div`
     grid-template-columns: 1fr 1fr;
 `
 
-const CardContainer = styled.div`
+const CardContainer = styled.button`
     flex: 1;
     margin: 2rem;
+    background: none;
+    border: none;
 `
 
 const ALDSection = ({ setItemSelected, isDark }) => {
     return (
-        <Wrapper>
+        <Wrapper id="ALD">
             <SectionTitle>Assistive listening devices (ALDs)</SectionTitle>
             <CardsContainer>
                 {ALDsSectionData.map((section) => (

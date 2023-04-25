@@ -1,6 +1,5 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import theme from "../theme";
-import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 

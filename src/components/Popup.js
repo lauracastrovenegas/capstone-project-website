@@ -25,11 +25,13 @@ const PopupContainer = styled.div`
     padding: 2rem;
 `
 
-const Close = styled.div`
+const Close = styled.button`
     display: flex;
+    background: none;
+    border: none;
+    margin: 0rem 1rem 1rem auto;
 
     svg {
-        margin: 0rem 1rem 1rem auto;
 
         :hover {
             cursor: pointer;
@@ -53,9 +55,9 @@ const Popup = ({ item, setItemSelected, isDark }) => {
 
     return (
         item ?
-            <PopupWrapper aria-hidden={item} role="dialog" tabindex={item ? 0 : -1} onClick={() => setItemSelected(null)}>
+            <PopupWrapper aria-hidden={item} role="dialog" tabindex={item ? 1 : -1} onClick={() => setItemSelected(null)}>
                 <PopupContainer onClick={e => e.stopPropagation()} isDark={isDark}>
-                    <Close><FontAwesomeIcon icon={faX} onClick={() => setItemSelected(null)}/></Close>
+                    <Close onClick={() => setItemSelected(null)}><FontAwesomeIcon icon={faX}/></Close>
                     {item.title ? <Title>{item.title}</Title> : null}
                     {item.text ? <Text>{item.text}</Text> : null}
                     {item.videoLink ? <Video><YoutubeEmbed videoLink={item.videoLink} /></Video> : null}

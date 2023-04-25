@@ -19,15 +19,22 @@ const CardsContainer = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
 `
 
+const SquareWrapper = styled.button`
+    flex: 1;
+    margin: 2rem;
+    background: none;
+    border: none;
+`
+
 const ADSection = ({setItemSelected}) => {
     return (
-        <Wrapper>
+        <Wrapper id="AD">
             <SectionTitle>Alerting Devices</SectionTitle>
             <CardsContainer>
                 {ADSectionData.map((item) => (
-                    <div onClick={() => setItemSelected(item)}>
+                    <SquareWrapper onClick={() => setItemSelected(item)}>
                         <PhotoSquare imgLink={item.imgLink} imgAlt={item.imgAlt} title={item.title} clickable/>
-                    </div>
+                    </SquareWrapper>
                 ))}
             </CardsContainer>
         </Wrapper>

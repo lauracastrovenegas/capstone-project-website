@@ -17,13 +17,9 @@ const CardsContainer = styled.div`
 
 `
 
-const Row = styled.div`
-    display: flex;
-`
-
 const AACSection = ({setItemSelected, isDark}) => {
     return (
-        <Wrapper>
+        <Wrapper id="AAC">
             <SectionTitle>Augmentative and alternative communication (AAC) devices</SectionTitle>
             <CardsContainer>
                 <SubsectionCarousel title="Face to Face" items={AACSectionData[0]} isDark={isDark}/>

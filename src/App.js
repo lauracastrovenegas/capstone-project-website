@@ -12,15 +12,27 @@ const BodyWrapper = styled.main`
   background-color: ${props => props.darkMode ? 'black' : 'white'};
   color: ${props => props.darkMode ? 'white' : 'black'};
 `
+const SkipLink = styled.a`
+  margin-right: 1rem;
+  position: absolute;
+  transform: translateX(-200%);
+  transition: transform 0.3s;
+
+  &:focus {
+    position: static;
+    transform: translateX(0);
+  }
+`
 
 const App = () => {
   const [currentSection, setSection] = useState("/");
-  const [staticMode, setStaticMode] = useState(true);
-  const [darkMode, setDarkMode] = useState(true);
+  const [staticMode, setStaticMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <header>
+        <SkipLink href="#main">Skip Navigation Links</SkipLink>
         <OptionsBar setStaticMode={setStaticMode} setDarkMode={setDarkMode} staticMode={staticMode} darkMode={darkMode} />
         <Navbar setSection={setSection} currentSection={currentSection} isDark={darkMode} />
       </header>
