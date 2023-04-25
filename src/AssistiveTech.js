@@ -21,7 +21,7 @@ const MainTitle = styled.h1`
 `
 
 const PurpleText = styled.span`
-    color: ${theme.colors.purple};
+    color: ${props => props.isDark ? theme.colors.lightPurple : theme.colors.purple};
 `
 
 const BoldText = styled.span`
@@ -58,7 +58,7 @@ const AssistiveTech = ({setSection, isDark}) => {
     return (
         <PageWrapper>
             <Popup item={itemSelected} setItemSelected={setItemSelected} isDark={isDark}/>
-            <MainTitle>What types of <PurpleText>assistive devices</PurpleText> are available for <PurpleText>Deaf/Hard-of-Hearing</PurpleText> People?</MainTitle>
+            <MainTitle>What types of <PurpleText isDark={isDark}>assistive devices</PurpleText> are available for <PurpleText isDark={isDark}>Deaf/Hard-of-Hearing</PurpleText> People?</MainTitle>
             <GreyCallout isDark={isDark}><BoldText role="heading">What is an assistive device?</BoldText> The terms assistive device or assistive technology can refer to any device that helps a person with hearing loss or a voice, speech, or language disorder to communicate. These terms often refer to devices that help a person to hear and understand what is being said more clearly or to express thoughts more easily.</GreyCallout>
             <Row1>
                 {AssistiveTechData.map((item) => (

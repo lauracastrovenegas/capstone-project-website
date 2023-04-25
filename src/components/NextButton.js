@@ -13,9 +13,9 @@ const Wrapper = styled.div`
 `
 
 const ButtonWrapper = styled.button`
-    color: ${theme.colors.purple};
+    color: ${props => props.isDark ? theme.colors.lightPurple : theme.colors.purple};
     background-color: ${props => props.isDark ? theme.colors.black : theme.colors.white};
-    border-color: ${theme.colors.purple};
+    border-color: ${props => props.isDark ? theme.colors.lightPurple : theme.colors.purple};
     border-style: solid;
     border-width: 5px;
     border-radius: 30px;
@@ -26,6 +26,7 @@ const ButtonWrapper = styled.button`
 
     :hover {
         background-color: ${theme.colors.purple};
+        border-color: ${theme.colors.purple};
         color: white;
     }
 `

@@ -27,7 +27,7 @@ const App = () => {
       <BodyWrapper darkMode={darkMode}>
         {currentSection === '/' ?
           staticMode ? <AssistiveTechStatic setSection={setSection} isDark={darkMode} /> : <AssistiveTech setSection={setSection} isDark={darkMode} />
-          : <LearnASL setSection={setSection} options={{ staticMode: staticMode, darkMode: darkMode }} />}
+          : <LearnASL setSection={setSection} isDark={darkMode} />}
       </BodyWrapper>
     </BrowserRouter>
   );

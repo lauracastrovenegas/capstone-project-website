@@ -35,7 +35,7 @@ const Text = styled.p`
 `
 
 const PurpleText = styled.span`
-    color: ${theme.colors.purple};
+    color: ${props => props.isDark ? theme.colors.lightPurple : theme.colors.purple};
 `
 
 const Videos = styled.h2`
@@ -76,16 +76,16 @@ const Image = styled.a`
     }
 `
 
-const LearnASL = ({setSection, options}) => {
+const LearnASL = ({isDark}) => {
     return (
         <PageWrapper>
-        <MainTitle>Learn <PurpleText>American Sign Language</PurpleText></MainTitle>
+        <MainTitle>Learn <PurpleText isDark={isDark}>American Sign Language</PurpleText></MainTitle>
         <Subtitle>Learn your first 10 words/phrases in ASL</Subtitle>
         <Text>One of the easiest ways to learn sign language is through YouTube tutorials. The video hosting site has dozens of teachers who give free lessons on how to sign the alphabet, common phrases, numbers, and more.</Text>
         <Videos>
             {ASLVideos.map((video) => (
             <Video>
-                <Subtitle2><PurpleText>{video.title}</PurpleText></Subtitle2>
+                <Subtitle2><PurpleText isDark={isDark}>{video.title}</PurpleText></Subtitle2>
                 <YoutubeEmbed videoLink={video.videoLink}/>
             </Video>
         ))}

@@ -4,15 +4,18 @@ import { Link } from 'react-router-dom';
 
 const ButtonWrapper = styled.button`
     color: ${props => props.isDark ? 
-        props => props.isActive ? theme.colors.white : theme.colors.purple
+        props => props.isActive ? theme.colors.white : theme.colors.lightPurple
         : props => props.isActive ? theme.colors.white : theme.colors.purple};
     
     background-color: ${props => props.isDark ? 
         props => props.isActive ? theme.colors.purple : theme.colors.black
         : props => props.isActive ? theme.colors.purple : theme.colors.white};
     
-    border-color: ${theme.colors.purple};
-    border-style: solid;
+    border-color: ${props => props.isDark ? 
+        props => props.isActive ? theme.colors.purple : theme.colors.lightPurple
+        : props => props.isActive ? theme.colors.purple : theme.colors.purple};
+    
+        border-style: solid;
     border-width: 5px;
     border-radius: 30px;
     font-size: 2rem;
@@ -23,6 +26,7 @@ const ButtonWrapper = styled.button`
 
     :hover {
         background-color: ${theme.colors.purple};
+        border-color: ${theme.colors.purple};
         color: white;
     }
 `
