@@ -111,14 +111,14 @@ const LearnASL = ({ isDark }) => {
             <Subtitle id="youtube-teach">Youtube ASL Teachers</Subtitle>
             <Row>
                 {ASLYoutubers.map((youtuber) => (
-                    <Image href={youtuber.link}><img src={youtuber.imgLink} alt={`${youtuber.name}'s youtube profile`} /></Image>
+                    <Image href={youtuber.link} target="_blank"><img src={youtuber.imgLink} alt={`${youtuber.name}'s youtube profile`} /></Image>
                 ))}
             </Row>
             <Subtitle id="other">Other Resources</Subtitle>
             <Text>Outside of YouTube, the internet also offers a plethora of resources for those looking to learn sign language, including quizzes, courses, and more.</Text>
             <Row>
                 {ASLResources.map((item) => (
-                    <Image href={item.link}><Subtitle3>{item.title}</Subtitle3></Image>
+                    <Image href={item.link} target="_blank"><Subtitle3>{item.title}</Subtitle3></Image>
                 ))}
             </Row>
         </PageWrapper>
