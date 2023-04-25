@@ -1,12 +1,11 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import AssistiveTech from './AssistiveTech';
 import AssistiveTechStatic from './AssistiveTechStatic';
 import LearnASL from './LearnASL';
 import Navbar from './components/Navbar';
 import OptionsBar from './components/OptionsBar';
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import { useEffect } from 'react';
 
 const BodyWrapper = styled.main`
   padding: 0rem 10rem;
@@ -22,16 +21,13 @@ const App = () => {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <header>
-        <OptionsBar setStaticMode={setStaticMode} setDarkMode={setDarkMode} staticMode={staticMode} darkMode={darkMode}/>
-        <Navbar setSection={setSection} currentSection={currentSection} isDark={darkMode}/>
+        <OptionsBar setStaticMode={setStaticMode} setDarkMode={setDarkMode} staticMode={staticMode} darkMode={darkMode} />
+        <Navbar setSection={setSection} currentSection={currentSection} isDark={darkMode} />
       </header>
       <BodyWrapper darkMode={darkMode}>
-      {staticMode ? <AssistiveTechStatic setSection={setSection} isDark={darkMode}/> : <AssistiveTech setSection={setSection} isDark={darkMode}/>}
-      {<LearnASL setSection={setSection} options={{staticMode:staticMode, darkMode:darkMode}}/>}
-        {/* <Routes>
-        <Route exact path="/" element={staticMode ? <AssistiveTechStatic setSection={setSection} isDark={darkMode}/> : <AssistiveTech setSection={setSection} isDark={darkMode}/>} />
-        <Route exact path="/asl" element={<LearnASL setSection={setSection} options={{staticMode:staticMode, darkMode:darkMode}}/>} />
-      </Routes> */}
+        {currentSection === '/' ?
+          staticMode ? <AssistiveTechStatic setSection={setSection} isDark={darkMode} /> : <AssistiveTech setSection={setSection} isDark={darkMode} />
+          : <LearnASL setSection={setSection} options={{ staticMode: staticMode, darkMode: darkMode }} />}
       </BodyWrapper>
     </BrowserRouter>
   );
