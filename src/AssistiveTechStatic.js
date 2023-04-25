@@ -47,7 +47,7 @@ const Subtitle = styled.h2`
     margin-top: 4rem;
 `
 
-const Video = styled.h2`
+const Video = styled.div`
     width: 50vw;
     margin: 0rem auto;
 `
