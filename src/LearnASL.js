@@ -2,6 +2,7 @@ import styled from "styled-components/macro";
 import theme from "./theme";
 import YoutubeEmbed from "./components/YoutubeEmbed";
 import { ASLVideos, ASLYoutubers, ASLResources } from "./data";
+import { useEffect } from "react";
 
 const PageWrapper = styled.div`
     padding-bottom: 4rem;
@@ -86,38 +87,42 @@ const SkipLink = styled.a`
   }
 `
 
-const LearnASL = ({isDark}) => {
+const LearnASL = ({ isDark }) => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    },[]);
+
     return (
         <PageWrapper>
-        <MainTitle>Learn <PurpleText isDark={isDark}>American Sign Language</PurpleText></MainTitle>
-        <Subtitle>Learn your first 10 words/phrases in ASL</Subtitle>
-        <Text>One of the easiest ways to learn sign language is through YouTube tutorials. The video hosting site has dozens of teachers who give free lessons on how to sign the alphabet, common phrases, numbers, and more.</Text>
-        <SkipLink href="#asl-videos">Skip to ASL Videos</SkipLink>
-        <SkipLink href="#youtube-teach">Skip to YouTube ASL Teachers</SkipLink>
-        <SkipLink href="#other">Skip to Other Resources</SkipLink>
-        <Videos id="asl-videos">
-            {ASLVideos.map((video) => (
-            <Video>
-                <Subtitle2><PurpleText isDark={isDark}>{video.title}</PurpleText></Subtitle2>
-                <YoutubeEmbed videoLink={video.videoLink}/>
-            </Video>
-        ))}
-        </Videos>
-        <Subtitle id="youtube-teach">Youtube ASL Teachers</Subtitle>
-        <Row>
-            {ASLYoutubers.map((youtuber) => (
-                <Image href={youtuber.link}><img src={youtuber.imgLink} alt={`${youtuber.name}'s youtube profile`}/></Image>
-            ))}
-        </Row>
-        <Subtitle id="other">Other Resources</Subtitle>
-        <Text>Outside of YouTube, the internet also offers a plethora of resources for those looking to learn sign language, including quizzes, courses, and more.</Text>
-        <Row>
-            {ASLResources.map((item) => (
-                <Image href={item.link}><Subtitle3>{item.title}</Subtitle3></Image>
-            ))}
-        </Row>
+            <MainTitle>Learn <PurpleText isDark={isDark}>American Sign Language</PurpleText></MainTitle>
+            <Subtitle>Learn your first 10 words/phrases in ASL</Subtitle>
+            <Text>One of the easiest ways to learn sign language is through YouTube tutorials. The video hosting site has dozens of teachers who give free lessons on how to sign the alphabet, common phrases, numbers, and more.</Text>
+            <SkipLink href="#asl-videos">Skip to ASL Videos</SkipLink>
+            <SkipLink href="#youtube-teach">Skip to YouTube ASL Teachers</SkipLink>
+            <SkipLink href="#other">Skip to Other Resources</SkipLink>
+            <Videos id="asl-videos">
+                {ASLVideos.map((video) => (
+                    <Video>
+                        <Subtitle2><PurpleText isDark={isDark}>{video.title}</PurpleText></Subtitle2>
+                        <YoutubeEmbed videoLink={video.videoLink} />
+                    </Video>
+                ))}
+            </Videos>
+            <Subtitle id="youtube-teach">Youtube ASL Teachers</Subtitle>
+            <Row>
+                {ASLYoutubers.map((youtuber) => (
+                    <Image href={youtuber.link}><img src={youtuber.imgLink} alt={`${youtuber.name}'s youtube profile`} /></Image>
+                ))}
+            </Row>
+            <Subtitle id="other">Other Resources</Subtitle>
+            <Text>Outside of YouTube, the internet also offers a plethora of resources for those looking to learn sign language, including quizzes, courses, and more.</Text>
+            <Row>
+                {ASLResources.map((item) => (
+                    <Image href={item.link}><Subtitle3>{item.title}</Subtitle3></Image>
+                ))}
+            </Row>
         </PageWrapper>
-    )    
+    )
 }
 
 export default LearnASL;
