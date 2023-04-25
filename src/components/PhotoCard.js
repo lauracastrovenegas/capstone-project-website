@@ -6,6 +6,7 @@ const CardWrapper = styled.div`
     flex-direction: column;
     padding: 1.5rem;
     background-color: ${props => props.isDark ? 'black' : 'white'};
+    color: ${props => props.isDark ? theme.colors.white : theme.colors.black};
     border-radius: 15px;
 
     box-shadow: 0px 67.11px 109.06px rgba(0, 0, 0, 0.05);

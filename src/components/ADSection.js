@@ -21,7 +21,6 @@ const CardsContainer = styled.div`
 
 const SquareWrapper = styled.button`
     flex: 1;
-    margin: 2rem;
     background: none;
     border: none;
 `

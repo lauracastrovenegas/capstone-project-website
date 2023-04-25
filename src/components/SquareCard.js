@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import theme from "../theme"
 
 const Text = styled.div`
     margin: auto auto;
@@ -6,11 +7,12 @@ const Text = styled.div`
     font-weight: 800;
     height: fit-content;
     text-align: center;
+    //color: white;
 `
 
-const SquareCard = ({children}) => {
+const SquareCard = ({children, isDark}) => {
     return (
-        <Text>{children}</Text>
+        <Text isDark={isDark}>{children}</Text>
     )
 }
 

@@ -35,6 +35,7 @@ const Row1 = styled.div`
 const SquareWrapper = styled.button`
     display: flex;
     background-color: ${props => props.isDark ? "black" : "white"};
+    color: ${props => props.isDark ? theme.colors.white : theme.colors.black};
     border-radius: 15px;
     padding: 3rem 1.5rem;
     flex: 1;
@@ -72,7 +73,7 @@ const AssistiveTech = ({setSection, isDark}) => {
             <Row1>
                 {AssistiveTechData.map((item) => (
                     <SquareWrapper onClick={() =>  setItemSelected(item)} isDark={isDark}>
-                        <SquareCard>{item.title}</SquareCard>
+                        <SquareCard isDark={isDark}>{item.title}</SquareCard>
                     </SquareWrapper>
                 ))}
             </Row1>

@@ -24,9 +24,10 @@ const Subtitle2 = styled.h3`
 `
 
 const Subtitle3 = styled.h3`
-    margin: auto 1rem auto 1rem;
+    margin: auto auto;
     font-size: 1.2rem;
     height: fit-content;
+    padding: 0rem 1rem;
 `
 
 const Text = styled.p`
