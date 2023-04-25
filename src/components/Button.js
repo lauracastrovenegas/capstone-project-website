@@ -1,17 +1,16 @@
 import styled from "styled-components";
 import theme from "../theme";
-import { Link } from 'react-router-dom';
 
 const ButtonWrapper = styled.button`
-    color: ${props => props.isDark ? 
+    color: ${props => props.isDark ?
         props => props.isActive ? theme.colors.white : theme.colors.lightPurple
         : props => props.isActive ? theme.colors.white : theme.colors.purple};
     
-    background-color: ${props => props.isDark ? 
+    background-color: ${props => props.isDark ?
         props => props.isActive ? theme.colors.purple : theme.colors.black
         : props => props.isActive ? theme.colors.purple : theme.colors.white};
     
-    border-color: ${props => props.isDark ? 
+    border-color: ${props => props.isDark ?
         props => props.isActive ? theme.colors.purple : theme.colors.lightPurple
         : props => props.isActive ? theme.colors.purple : theme.colors.purple};
     
@@ -31,12 +30,9 @@ const ButtonWrapper = styled.button`
     }
 `
 
-const Button = ({text, link, currentSection, setSection, isDark}) => {
-
+const Button = ({ text, link, currentSection, setSection, isDark }) => {
     return (
-        <Link aria-label={`go to ${text} tab`} to={link} style={{margin: "1rem auto"}} onClick={() => setSection(link)}>
-            <ButtonWrapper isActive={currentSection === link} isDark={isDark}>{text}</ButtonWrapper>
-        </Link>
+        <ButtonWrapper aria-label={`go to ${text} tab`} onClick={() => setSection(link)} style={{ margin: "1rem auto" }} isActive={currentSection === link} isDark={isDark}>{text}</ButtonWrapper>
     )
 }
 
