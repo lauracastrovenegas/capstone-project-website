@@ -12,7 +12,7 @@ const Wrapper = styled.div`
     }
 `
 
-const ButtonWrapper = styled.div`
+const ButtonWrapper = styled.button`
     color: ${theme.colors.purple};
     background-color: ${props => props.isDark ? theme.colors.black : theme.colors.white};
     border-color: ${theme.colors.purple};
@@ -22,6 +22,7 @@ const ButtonWrapper = styled.div`
     padding: 1.5rem 2rem;
     width: 23rem;
     cursor: pointer;
+    margin: 0rem auto;
 
     :hover {
         background-color: ${theme.colors.purple};
@@ -42,14 +43,12 @@ const Text = styled.div`
     }
 `
 
-const NextButton = ({text, link, setSection, isDark}) => {
+const NextButton = ({ text, link, setSection, isDark }) => {
     return (
         <Wrapper>
-            <Link aria-label={`go to ${text} tab`} to={link} style={{margin: "1rem auto"}} onClick={() => setSection(link)}>
-            <ButtonWrapper isDark={isDark}>
-                <Text>{text} <FontAwesomeIcon icon={faChevronRight}/></Text>
+            <ButtonWrapper isDark={isDark} onClick={() => setSection(link)} aria-label={`go to ${text} tab`}>
+                <Text>{text} <FontAwesomeIcon icon={faChevronRight} /></Text>
             </ButtonWrapper>
-        </Link>
         </Wrapper>
     )
 }
