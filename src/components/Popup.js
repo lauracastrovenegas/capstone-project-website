@@ -2,6 +2,7 @@ import styled from "styled-components/macro"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faX } from "@fortawesome/free-solid-svg-icons"
 import YoutubeEmbed from "./YoutubeEmbed"
+import theme from "../theme"
 
 const PopupWrapper = styled.div`
     z-index: 1000;
@@ -30,6 +31,7 @@ const Close = styled.button`
     background: none;
     border: none;
     margin: 0rem 1rem 1rem auto;
+    color: ${props => props.isDark ? theme.colors.white : theme.colors.black};
 
     svg {
 
@@ -57,7 +59,7 @@ const Popup = ({ item, setItemSelected, isDark }) => {
         item ?
             <PopupWrapper aria-hidden={item} role="dialog" tabindex={item ? 1 : -1} onClick={() => setItemSelected(null)}>
                 <PopupContainer onClick={e => e.stopPropagation()} isDark={isDark}>
-                    <Close onClick={() => setItemSelected(null)}><FontAwesomeIcon icon={faX}/></Close>
+                    <Close isDark={isDark} onClick={() => setItemSelected(null)}><FontAwesomeIcon icon={faX}/></Close>
                     {item.title ? <Title>{item.title}</Title> : null}
                     {item.text ? <Text>{item.text}</Text> : null}
                     {item.videoLink ? <Video><YoutubeEmbed videoLink={item.videoLink} /></Video> : null}
