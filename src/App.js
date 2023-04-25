@@ -15,8 +15,8 @@ const BodyWrapper = styled.main`
 
 const App = () => {
   const [currentSection, setSection] = useState("/");
-  const [staticMode, setStaticMode] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  const [staticMode, setStaticMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(true);
 
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
